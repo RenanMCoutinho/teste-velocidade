@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velocimetro de Rede</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="orb orb-left"></div>
+    <div class="orb orb-right"></div>
+
+    <main class="app-card">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Network Speed Test</p>
+          <h1>Teste sua conexao.</h1>
+          <p class="subtitle">
+            Ping, download e upload em tempo real.
+          </p>
+          <p class="runtime-notice" id="runtimeNotice">
+            Abra em um servidor local para uma execucao mais consistente.
+          </p>
+        </div>
+
+      </section>
+
+      <section class="dashboard">
+        <article class="meter-panel">
+          <div class="meter-header">
+            <div>
+              <p class="label">Status</p>
+              <h2 id="statusText">Pronto para iniciar</h2>
+            </div>
+            <div class="server-badge">
+              <span class="badge-dot"></span>
+              Navegador
+            </div>
+          </div>
+
+          <div class="gauge-wrap">
+            <div
+              class="gauge"
+              id="gauge"
+              style="--gauge-progress: 0deg;"
+              aria-label="Velocidade atual"
+            >
+              <button class="start-button gauge-start-button" id="startTestButton" type="button">
+                <span class="button-ring"></span>
+                <span class="button-label">Iniciar</span>
+              </button>
+              <div class="gauge-inner">
+                <p class="gauge-caption" id="currentMetricLabel">Mbps</p>
+                <div class="gauge-value-row">
+                  <span class="gauge-value" id="gaugeValue">0.00</span>
+                </div>
+                <p class="gauge-phase" id="phaseLabel">Aguardando</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="live-stats">
+            <div class="stat-chip">
+              <span class="stat-chip-label">Jitter</span>
+              <strong id="jitterValue">0.0 ms</strong>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-chip-label">Latencia</span>
+              <strong id="latencyValue">0 ms</strong>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-chip-label">Perdas</span>
+              <strong id="lossValue">0%</strong>
+            </div>
+          </div>
+        </article>
+
+        <aside class="results-panel">
+          <div class="results-grid">
+            <article class="result-card result-download">
+              <p class="result-label">Download</p>
+              <div class="result-value-row">
+                <span class="result-value" id="downloadValue">0.00</span>
+                <span class="result-unit">Mbps</span>
+              </div>
+            </article>
+
+            <article class="result-card result-upload">
+              <p class="result-label">Upload</p>
+              <div class="result-value-row">
+                <span class="result-value" id="uploadValue">0.00</span>
+                <span class="result-unit">Mbps</span>
+              </div>
+            </article>
+
+            <article class="result-card result-ping">
+              <p class="result-label">Ping</p>
+              <div class="result-value-row">
+                <span class="result-value" id="pingValue">0</span>
+                <span class="result-unit">ms</span>
+              </div>
+            </article>
+
+            <article class="result-card result-ip">
+              <p class="result-label">Qualidade</p>
+              <div class="result-value-row">
+                <span class="result-text" id="qualityLabel">Nao medida</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="session-log">
+            <div class="session-log-header">
+              <p class="label">Historico da sessao</p>
+              <button class="ghost-button" id="resetButton" type="button">Limpar</button>
+            </div>
+            <ul id="historyList" class="history-list">
+              <li class="history-empty">Nenhum teste executado ainda.</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+{
+  "name": "teste-velocidade",
+  "version": "1.0.0",
+  "description": "Testador de velocidade de rede em JavaScript puro com servidor local Node.",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "dev": "node src/server/server.js"
+  }
+}
