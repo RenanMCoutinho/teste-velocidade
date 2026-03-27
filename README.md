@@ -1,5 +1,7 @@
 # Teste de Velocidade
 
+![Capa do projeto](public/assets/images/github-cover.png)
+
 Aplicacao web para medir ping, download e upload em tempo real com interface moderna no navegador e servidor local em Node.js.
 
 ## Visao geral
@@ -82,3 +84,4 @@ Este projeto e uma base enxuta para estudos de redes, interfaces em tempo real e
 - Publicar apenas arquivos necessarios para execucao da aplicacao.
 - Revisar futuras integracoes com APIs para evitar chaves no frontend.
 - Preferir execucao local em `127.0.0.1` durante desenvolvimento.
+
