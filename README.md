@@ -1,10 +1,18 @@
 # Teste de Velocidade
 
-Aplicacao web para medir ping, download e upload em tempo real usando JavaScript no navegador e um servidor local em Node.js.
+Aplicacao web para medir ping, download e upload em tempo real com interface moderna no navegador e servidor local em Node.js.
 
 ## Visao geral
 
-O projeto simula a experiencia de um velocimetro de rede com interface moderna, exibicao de metricas ao vivo e historico da sessao. O backend expoe rotas simples para health check, ping, download e upload, permitindo que o frontend calcule os indicadores diretamente no navegador.
+O projeto simula a experiencia de um velocimetro de rede com medicao de latencia, download e upload em tempo real. A interface foi criada em HTML, CSS e JavaScript puro, enquanto o backend usa Node.js para fornecer os endpoints de teste e servir a aplicacao localmente.
+
+## Destaques
+
+- Interface moderna com gauge central e indicadores em tempo real
+- Medicao de ping, jitter, perdas, download e upload
+- Historico resumido da sessao no navegador
+- Estrutura organizada para manutencao e evolucao
+- Servidor local com configuracao mais segura para desenvolvimento
 
 ## Tecnologias
 
@@ -66,6 +74,7 @@ http://127.0.0.1:3000
 ## Objetivo do projeto
 
 Este projeto e uma base enxuta para estudos de redes, interfaces em tempo real e organizacao de aplicacoes web sem frameworks. A estrutura foi separada para facilitar manutencao, evolucao e publicacao no GitHub.
+
 ## Checklist de publicacao segura
 
 - Nao versionar arquivos `.env`, chaves privadas ou credenciais.
